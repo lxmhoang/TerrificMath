@@ -12,6 +12,7 @@
 {
     int point, x, y, z;
     BOOL hiddenAnswer, answerGivenIsCorrect;
+    NSArray *listColor;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *pointLabel;

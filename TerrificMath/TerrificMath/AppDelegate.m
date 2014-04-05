@@ -11,16 +11,25 @@
 
 @implementation AppDelegate
 
+- (void)initData
+{
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:kHighestPoint] == nil)
+    {
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:kHighestPoint];
+    }
+
+    
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:kHighestPoint] == nil)
-    {
-        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:kHighestPoint];
-    }
+    [self initData];
+    
+
     
     MenuViewController *nextVC = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
     self.window.rootViewController = nextVC;

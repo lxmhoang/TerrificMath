@@ -26,6 +26,19 @@ bool stop = NO;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        listColor = @[
+                      [UIColor colorWithRed:76/255.0f green:153/255.0f blue:0/255.0f alpha:1],
+                      [UIColor colorWithRed:25/255.0f green:51/255.0f blue:0/255.0f alpha:1],
+                      [UIColor colorWithRed:102/255.0f green:0/255.0f blue:51/255.0f alpha:1],
+                      [UIColor colorWithRed:0/255.0f green:76/255.0f blue:153/255.0f alpha:1],
+                      [UIColor colorWithRed:204/255.0f green:102/255.0f blue:0/255.0f alpha:1],
+                      [UIColor colorWithRed:255/255.0f green:128/255.0f blue:0/255.0f alpha:1],
+                      [UIColor colorWithRed:102/255.0f green:102/255.0f blue:255/255.0f alpha:1],
+                      [UIColor colorWithRed:0/255.0f green:51/255.0f blue:0/255.0f alpha:1],
+                      [UIColor colorWithRed:0/255.0f green:0/255.0f blue:102/255.0f alpha:1],
+                      
+                      
+                      ];
     }
     return self;
 }
@@ -42,15 +55,46 @@ bool stop = NO;
     point = 0;
     pointLabel.text =@"0";
     [self newGame];
+
 }
 
 - (void)newGame
 {
+    UIColor *bgColor = self.view.backgroundColor;
+    
+    UIColor *color = [listColor objectAtIndex:(rand()%(listColor.count-1))];
+    while ([color isEqual:bgColor]) {
+        int num = rand()%(listColor.count-1);
+        color = [listColor objectAtIndex:num];
+    }
+    
+    
+    NSLog(@"color index : %d",[listColor indexOfObject:color]);
+    
+    [self.view setBackgroundColor:color];
+    
     correctBtn.enabled = YES;
     wrongBtn.enabled = YES;
-    x = rand()%10;
-    y = rand()%10;
-    z = rand()%20;
+    
+    int difficult;
+    if (point<9)
+        difficult = 5;
+    else
+        difficult = 10;
+    
+    NSLog(@"difficult : %d", difficult);
+    
+    x = rand()%difficult+1+difficult-5;;
+    y = rand()%difficult+x+3;
+    
+    int beta = round((x+y)/4);
+    
+    z = rand()%(beta*2) + x+y-beta;
+    
+    if (z==x+y)
+        z++;
+   
+//    z = rand()%((y-x)*2)+x+x;
     equationLabel.text = [NSString stringWithFormat:@"%d + %d", x, y];
     resultLabel.text = [NSString stringWithFormat:@"%d", z];
     hiddenAnswer = (x+y) == z;
