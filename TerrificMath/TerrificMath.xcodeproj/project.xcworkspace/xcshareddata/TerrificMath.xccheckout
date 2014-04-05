@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B6FA4900-BA62-4965-AF37-DC78360D8BBE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TerrificMath</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FE273B6E-1B19-4AFF-9AB3-321BB5A2FC7F</key>
+		<string>https://github.com/lxmhoang/TerrificMath.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TerrificMath/TerrificMath.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FE273B6E-1B19-4AFF-9AB3-321BB5A2FC7F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lxmhoang/TerrificMath.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FE273B6E-1B19-4AFF-9AB3-321BB5A2FC7F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FE273B6E-1B19-4AFF-9AB3-321BB5A2FC7F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TerrificMath</string>
+		</dict>
+	</array>
+</dict>
+</plist>
