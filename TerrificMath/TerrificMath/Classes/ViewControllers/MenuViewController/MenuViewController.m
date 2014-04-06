@@ -44,5 +44,23 @@
 - (IBAction)rateBtnAction:(id)sender {
 }
 - (IBAction)rankBtnAction:(id)sender {
+    GKGameCenterViewController *gcViewController = [[GKGameCenterViewController alloc] init];
+    
+    gcViewController.gameCenterDelegate = self;
+    
+    if (1==2) {
+        gcViewController.viewState = GKGameCenterViewControllerStateLeaderboards;
+        gcViewController.leaderboardIdentifier = @"TML";
+    }
+    else{
+        gcViewController.viewState = GKGameCenterViewControllerStateAchievements;
+    }
+    
+    [self presentViewController:gcViewController animated:YES completion:nil];
+}
+
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController NS_AVAILABLE_IOS(6_0)
+{
+    [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
 }
 @end

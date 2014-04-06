@@ -7,7 +7,7 @@
 //
 
 #define kHeightOfProgressView 4
-#define kTimeToAnswer 1
+#define kTimeToAnswer 1.5
 #import "PlayViewController.h"
 
 @interface PlayViewController ()
@@ -50,11 +50,16 @@ bool stop = NO;
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
     point = 0;
     pointLabel.text =@"0";
     [self newGame];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
 
 }
 
@@ -82,34 +87,44 @@ bool stop = NO;
     else
         difficult = 10;
     
-    NSLog(@"difficult : %d", difficult);
+//    NSLog(@"difficult : %d", difficult);
     
-    x = rand()%difficult+1+difficult-5;;
-    y = rand()%difficult+x+3;
+    x = arc4random_uniform(difficult)+1+difficult-5;;
+    y = arc4random_uniform(difficult)+x+3;
     
-    int beta = round((x+y)/4);
+    BOOL equal = arc4random_uniform(99) %2;
     
-    z = rand()%(beta*2) + x+y-beta;
+    if (equal)
+        NSLog(@"Bang");
+    else
+        NSLog(@"khac");
+    
+    z = equal ? x+y : x+y-arc4random_uniform(4)+arc4random_uniform(8);
+    
     
     if (z==x+y)
         z++;
    
-//    z = rand()%((y-x)*2)+x+x;
     equationLabel.text = [NSString stringWithFormat:@"%d + %d", x, y];
     resultLabel.text = [NSString stringWithFormat:@"%d", z];
     hiddenAnswer = (x+y) == z;
-    [progressView setFrame:CGRectMake(0, 0, 1, kHeightOfProgressView)];
-    [UIView animateWithDuration:kTimeToAnswer animations:^{
-            [progressView setFrame:CGRectMake(0, 0, 320, kHeightOfProgressView)];
-    } completion:^(BOOL finished) {
-        if (finished)
-        {
-            [self timeUp];
-        }else
-        {
-            
-        }
-    }];
+    [progressView setFrame:CGRectMake(0, 0, 320, kHeightOfProgressView)];
+    
+    if (point != 0)
+    {
+        
+        [UIView animateWithDuration:kTimeToAnswer animations:^{
+            [progressView setFrame:CGRectMake(0, 0, 0, kHeightOfProgressView)];
+        } completion:^(BOOL finished) {
+            if (finished)
+            {
+                [self timeUp];
+            }else
+            {
+                
+            }
+        }];
+    }
 }
 
 - (void)timeUp
@@ -123,7 +138,7 @@ bool stop = NO;
     correctBtn.enabled = NO;
     wrongBtn.enabled = NO;
     [progressView.layer removeAllAnimations];
-    [progressView setFrame:CGRectMake(0, 0, 1, kHeightOfProgressView)];
+    [progressView setFrame:CGRectMake(0, 0, 320, kHeightOfProgressView)];
     
     if (answerGivenIsCorrect)
     {
@@ -144,6 +159,9 @@ bool stop = NO;
     if (point > [[NSUserDefaults standardUserDefaults] integerForKey:kHighestPoint])
     {
         [[NSUserDefaults standardUserDefaults] setInteger:point forKey:kHighestPoint];
+        [[GameKitHelper sharedGameKitHelper]
+         submitScore:(int64_t)point
+         category:kHighScoreLeaderboardCategory];
     }
     
     AnewScoreLabel.text = [NSString stringWithFormat:@"%d",point];

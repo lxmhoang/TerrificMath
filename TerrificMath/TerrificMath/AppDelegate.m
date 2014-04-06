@@ -29,11 +29,13 @@
     
     [self initData];
     
-
+    [[GameKitHelper sharedGameKitHelper]
+     authenticateLocalPlayer];
     
     MenuViewController *nextVC = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
     self.window.rootViewController = nextVC;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

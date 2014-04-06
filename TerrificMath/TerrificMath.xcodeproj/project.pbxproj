@@ -23,6 +23,12 @@
 		374ED47A18EFFD6400D3FE6B /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374ED47818EFFD6400D3FE6B /* MenuViewController.xib */; };
 		374ED47E18F002E300D3FE6B /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ED47C18F002E300D3FE6B /* PlayViewController.m */; };
 		374ED47F18F002E300D3FE6B /* PlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374ED47D18F002E300D3FE6B /* PlayViewController.xib */; };
+		A4A6557418F156DD00F1C968 /* ApActivityData.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6556D18F156DD00F1C968 /* ApActivityData.m */; };
+		A4A6557618F156DD00F1C968 /* FacebookActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6557318F156DD00F1C968 /* FacebookActivity.m */; };
+		A4A6557818F156F700F1C968 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A6557718F156F700F1C968 /* Social.framework */; };
+		A4A6557A18F1575C00F1C968 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A6557918F1575C00F1C968 /* FacebookSDK.framework */; };
+		A4A6558418F15FC300F1C968 /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6558318F15FC300F1C968 /* GameKitHelper.m */; };
+		A4A6558718F1634800F1C968 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A6558618F1634800F1C968 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,17 @@
 		374ED47B18F002E300D3FE6B /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
 		374ED47C18F002E300D3FE6B /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
 		374ED47D18F002E300D3FE6B /* PlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayViewController.xib; sourceTree = "<group>"; };
+		A4A6556C18F156DD00F1C968 /* ApActivityData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApActivityData.h; sourceTree = "<group>"; };
+		A4A6556D18F156DD00F1C968 /* ApActivityData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApActivityData.m; sourceTree = "<group>"; };
+		A4A6556E18F156DD00F1C968 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		A4A6557218F156DD00F1C968 /* FacebookActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookActivity.h; sourceTree = "<group>"; };
+		A4A6557318F156DD00F1C968 /* FacebookActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookActivity.m; sourceTree = "<group>"; };
+		A4A6557718F156F700F1C968 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A4A6557918F1575C00F1C968 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = TerrificMath/FacebookSDK.framework; sourceTree = "<group>"; };
+		A4A6558218F15FC200F1C968 /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitHelper.h; sourceTree = "<group>"; };
+		A4A6558318F15FC300F1C968 /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
+		A4A6558518F1633B00F1C968 /* TerrificMath.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TerrificMath.entitlements; sourceTree = "<group>"; };
+		A4A6558618F1634800F1C968 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +82,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A6557A18F1575C00F1C968 /* FacebookSDK.framework in Frameworks */,
+				A4A6557818F156F700F1C968 /* Social.framework in Frameworks */,
 				374ED44518EFF8C900D3FE6B /* CoreGraphics.framework in Frameworks */,
+				A4A6558718F1634800F1C968 /* GameKit.framework in Frameworks */,
 				374ED44718EFF8C900D3FE6B /* UIKit.framework in Frameworks */,
 				374ED44318EFF8C900D3FE6B /* Foundation.framework in Frameworks */,
 			);
@@ -106,6 +126,9 @@
 		374ED44118EFF8C900D3FE6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4A6558618F1634800F1C968 /* GameKit.framework */,
+				A4A6557918F1575C00F1C968 /* FacebookSDK.framework */,
+				A4A6557718F156F700F1C968 /* Social.framework */,
 				374ED44218EFF8C900D3FE6B /* Foundation.framework */,
 				374ED44418EFF8C900D3FE6B /* CoreGraphics.framework */,
 				374ED44618EFF8C900D3FE6B /* UIKit.framework */,
@@ -117,6 +140,7 @@
 		374ED44818EFF8C900D3FE6B /* TerrificMath */ = {
 			isa = PBXGroup;
 			children = (
+				A4A6558518F1633B00F1C968 /* TerrificMath.entitlements */,
 				374ED47118EFFD1C00D3FE6B /* Classes */,
 				374ED45118EFF8C900D3FE6B /* AppDelegate.h */,
 				374ED45218EFF8C900D3FE6B /* AppDelegate.m */,
@@ -158,6 +182,7 @@
 		374ED47118EFFD1C00D3FE6B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A4A6556A18F156DD00F1C968 /* Common */,
 				374ED47218EFFD1C00D3FE6B /* Models */,
 				374ED47318EFFD1C00D3FE6B /* ViewControllers */,
 			);
@@ -198,6 +223,44 @@
 				374ED47D18F002E300D3FE6B /* PlayViewController.xib */,
 			);
 			path = PlayViewController;
+			sourceTree = "<group>";
+		};
+		A4A6556A18F156DD00F1C968 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A4A6558118F15EC600F1C968 /* GameKitHelper */,
+				A4A6556B18F156DD00F1C968 /* ApActivityData */,
+				A4A6556E18F156DD00F1C968 /* Common.h */,
+				A4A6557118F156DD00F1C968 /* FacebookActivity */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A4A6556B18F156DD00F1C968 /* ApActivityData */ = {
+			isa = PBXGroup;
+			children = (
+				A4A6556C18F156DD00F1C968 /* ApActivityData.h */,
+				A4A6556D18F156DD00F1C968 /* ApActivityData.m */,
+			);
+			path = ApActivityData;
+			sourceTree = "<group>";
+		};
+		A4A6557118F156DD00F1C968 /* FacebookActivity */ = {
+			isa = PBXGroup;
+			children = (
+				A4A6557218F156DD00F1C968 /* FacebookActivity.h */,
+				A4A6557318F156DD00F1C968 /* FacebookActivity.m */,
+			);
+			path = FacebookActivity;
+			sourceTree = "<group>";
+		};
+		A4A6558118F15EC600F1C968 /* GameKitHelper */ = {
+			isa = PBXGroup;
+			children = (
+				A4A6558218F15FC200F1C968 /* GameKitHelper.h */,
+				A4A6558318F15FC300F1C968 /* GameKitHelper.m */,
+			);
+			path = GameKitHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +310,17 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = hoang;
 				TargetAttributes = {
+					374ED43E18EFF8C900D3FE6B = {
+						DevelopmentTeam = TMD3Y97MSH;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
+					};
 					374ED45918EFF8C900D3FE6B = {
 						TestTargetID = 374ED43E18EFF8C900D3FE6B;
 					};
@@ -298,6 +372,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				374ED47E18F002E300D3FE6B /* PlayViewController.m in Sources */,
+				A4A6557618F156DD00F1C968 /* FacebookActivity.m in Sources */,
+				A4A6557418F156DD00F1C968 /* ApActivityData.m in Sources */,
+				A4A6558418F15FC300F1C968 /* GameKitHelper.m in Sources */,
 				374ED45318EFF8C900D3FE6B /* AppDelegate.m in Sources */,
 				374ED47918EFFD6400D3FE6B /* MenuViewController.m in Sources */,
 				374ED44F18EFF8C900D3FE6B /* main.m in Sources */,
@@ -417,10 +494,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TerrificMath",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TerrificMath/TerrificMath-Prefix.pch";
 				INFOPLIST_FILE = "TerrificMath/TerrificMath-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -430,10 +515,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TerrificMath",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TerrificMath/TerrificMath-Prefix.pch";
 				INFOPLIST_FILE = "TerrificMath/TerrificMath-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -497,6 +590,7 @@
 				374ED46D18EFF8C900D3FE6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		374ED46E18EFF8C900D3FE6B /* Build configuration list for PBXNativeTarget "TerrificMathTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +599,7 @@
 				374ED47018EFF8C900D3FE6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MenuViewController : UIViewController
+@interface MenuViewController : UIViewController <GKGameCenterControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UIButton *playBtn;
 @property (weak, nonatomic) IBOutlet UIButton *rateBtn;
 @property (weak, nonatomic) IBOutlet UIButton *rankBtn;
