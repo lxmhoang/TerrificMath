@@ -46,6 +46,8 @@ bool stop = NO;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    [correctBtn setBackgroundImage:[UIImage imageNamed:@"right clicked.png"] forState:UIControlStateSelected];
+//    [wrongBtn setBackgroundImage:[UIImage imageNamed:@"wrong clicked.png"] forState:UIControlStateSelected];
     
     // Do any additional setup after loading the view from its nib.
 }

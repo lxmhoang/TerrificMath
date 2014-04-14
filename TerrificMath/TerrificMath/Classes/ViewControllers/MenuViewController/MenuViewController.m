@@ -9,6 +9,8 @@
 #import "MenuViewController.h"
 #import "PlayViewController.h"
 
+#import "NiceButton.h"
+
 @interface MenuViewController ()
 
 @end
@@ -20,10 +22,24 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        NiceButton *test = [[NiceButton alloc] initWithFrame:CGRectMake(10, 150, 120, 50) type:PlayButton];
+        [test setTitle:@"Play" forState:UIControlStateNormal];
+        [test addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchDown];
+        [test addTarget:self action:@selector(test2) forControlEvents:UIControlEventTouchCancel];
+        [self.view addSubview:test];
     }
     return self;
 }
 
+- (void)test
+{
+    NSLog(@"2");
+}
+
+- (void)test2
+{
+    NSLog(@"3");
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];

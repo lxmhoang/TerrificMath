@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3739139218F9B44700899025 /* Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 3739139018F9B44700899025 /* Delete.png */; };
+		3739139318F9B44700899025 /* Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 3739139118F9B44700899025 /* Check.png */; };
+		3739139818F9B78600899025 /* NiceButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3739139718F9B78600899025 /* NiceButton.m */; };
 		374ED44318EFF8C900D3FE6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374ED44218EFF8C900D3FE6B /* Foundation.framework */; };
 		374ED44518EFF8C900D3FE6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374ED44418EFF8C900D3FE6B /* CoreGraphics.framework */; };
 		374ED44718EFF8C900D3FE6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374ED44618EFF8C900D3FE6B /* UIKit.framework */; };
@@ -23,6 +26,16 @@
 		374ED47A18EFFD6400D3FE6B /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374ED47818EFFD6400D3FE6B /* MenuViewController.xib */; };
 		374ED47E18F002E300D3FE6B /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ED47C18F002E300D3FE6B /* PlayViewController.m */; };
 		374ED47F18F002E300D3FE6B /* PlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374ED47D18F002E300D3FE6B /* PlayViewController.xib */; };
+		37C1EC7218FC2107007428B8 /* right normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC7118FC2107007428B8 /* right normal.png */; };
+		37C1EC7418FC270A007428B8 /* right clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC7318FC270A007428B8 /* right clicked.png */; };
+		37C1EC7718FC2711007428B8 /* wrong clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC7518FC2711007428B8 /* wrong clicked.png */; };
+		37C1EC7818FC2711007428B8 /* wrong normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC7618FC2711007428B8 /* wrong normal.png */; };
+		37C1EC7A18FC305B007428B8 /* play normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC7918FC305B007428B8 /* play normal.png */; };
+		37C1EC7C18FC35D1007428B8 /* rate normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC7B18FC35D1007428B8 /* rate normal.png */; };
+		37C1EC7E18FC378E007428B8 /* rank normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC7D18FC378E007428B8 /* rank normal.png */; };
+		37C1EC8018FC38BC007428B8 /* play clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC7F18FC38BC007428B8 /* play clicked.png */; };
+		37C1EC8218FC39CB007428B8 /* rate clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC8118FC39CB007428B8 /* rate clicked.png */; };
+		37C1EC8418FC3AA8007428B8 /* rank clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC8318FC3AA8007428B8 /* rank clicked.png */; };
 		A4A6557418F156DD00F1C968 /* ApActivityData.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6556D18F156DD00F1C968 /* ApActivityData.m */; };
 		A4A6557618F156DD00F1C968 /* FacebookActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6557318F156DD00F1C968 /* FacebookActivity.m */; };
 		A4A6557818F156F700F1C968 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A6557718F156F700F1C968 /* Social.framework */; };
@@ -42,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3739139018F9B44700899025 /* Delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delete.png; sourceTree = "<group>"; };
+		3739139118F9B44700899025 /* Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Check.png; sourceTree = "<group>"; };
+		3739139618F9B78600899025 /* NiceButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NiceButton.h; sourceTree = "<group>"; };
+		3739139718F9B78600899025 /* NiceButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NiceButton.m; sourceTree = "<group>"; };
 		374ED43F18EFF8C900D3FE6B /* TerrificMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerrificMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		374ED44218EFF8C900D3FE6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		374ED44418EFF8C900D3FE6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,6 +81,16 @@
 		374ED47B18F002E300D3FE6B /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
 		374ED47C18F002E300D3FE6B /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
 		374ED47D18F002E300D3FE6B /* PlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayViewController.xib; sourceTree = "<group>"; };
+		37C1EC7118FC2107007428B8 /* right normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right normal.png"; sourceTree = "<group>"; };
+		37C1EC7318FC270A007428B8 /* right clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right clicked.png"; sourceTree = "<group>"; };
+		37C1EC7518FC2711007428B8 /* wrong clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wrong clicked.png"; sourceTree = "<group>"; };
+		37C1EC7618FC2711007428B8 /* wrong normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wrong normal.png"; sourceTree = "<group>"; };
+		37C1EC7918FC305B007428B8 /* play normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play normal.png"; sourceTree = "<group>"; };
+		37C1EC7B18FC35D1007428B8 /* rate normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rate normal.png"; sourceTree = "<group>"; };
+		37C1EC7D18FC378E007428B8 /* rank normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rank normal.png"; sourceTree = "<group>"; };
+		37C1EC7F18FC38BC007428B8 /* play clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play clicked.png"; sourceTree = "<group>"; };
+		37C1EC8118FC39CB007428B8 /* rate clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rate clicked.png"; sourceTree = "<group>"; };
+		37C1EC8318FC3AA8007428B8 /* rank clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rank clicked.png"; sourceTree = "<group>"; };
 		A4A6556C18F156DD00F1C968 /* ApActivityData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApActivityData.h; sourceTree = "<group>"; };
 		A4A6556D18F156DD00F1C968 /* ApActivityData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApActivityData.m; sourceTree = "<group>"; };
 		A4A6556E18F156DD00F1C968 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
@@ -104,6 +131,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3739139418F9B65D00899025 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3739139518F9B65D00899025 /* NiceButton */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		3739139518F9B65D00899025 /* NiceButton */ = {
+			isa = PBXGroup;
+			children = (
+				3739139618F9B78600899025 /* NiceButton.h */,
+				3739139718F9B78600899025 /* NiceButton.m */,
+			);
+			path = NiceButton;
+			sourceTree = "<group>";
+		};
 		374ED43618EFF8C900D3FE6B = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +197,18 @@
 		374ED44918EFF8C900D3FE6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				37C1EC8318FC3AA8007428B8 /* rank clicked.png */,
+				37C1EC8118FC39CB007428B8 /* rate clicked.png */,
+				37C1EC7F18FC38BC007428B8 /* play clicked.png */,
+				37C1EC7D18FC378E007428B8 /* rank normal.png */,
+				37C1EC7B18FC35D1007428B8 /* rate normal.png */,
+				37C1EC7918FC305B007428B8 /* play normal.png */,
+				37C1EC7518FC2711007428B8 /* wrong clicked.png */,
+				37C1EC7618FC2711007428B8 /* wrong normal.png */,
+				37C1EC7318FC270A007428B8 /* right clicked.png */,
+				37C1EC7118FC2107007428B8 /* right normal.png */,
+				3739139018F9B44700899025 /* Delete.png */,
+				3739139118F9B44700899025 /* Check.png */,
 				374ED44A18EFF8C900D3FE6B /* TerrificMath-Info.plist */,
 				374ED44B18EFF8C900D3FE6B /* InfoPlist.strings */,
 				374ED44E18EFF8C900D3FE6B /* main.m */,
@@ -182,6 +238,7 @@
 		374ED47118EFFD1C00D3FE6B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3739139418F9B65D00899025 /* Library */,
 				A4A6556A18F156DD00F1C968 /* Common */,
 				374ED47218EFFD1C00D3FE6B /* Models */,
 				374ED47318EFFD1C00D3FE6B /* ViewControllers */,
@@ -349,10 +406,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C1EC7218FC2107007428B8 /* right normal.png in Resources */,
+				37C1EC7418FC270A007428B8 /* right clicked.png in Resources */,
 				374ED47F18F002E300D3FE6B /* PlayViewController.xib in Resources */,
+				3739139218F9B44700899025 /* Delete.png in Resources */,
 				374ED44D18EFF8C900D3FE6B /* InfoPlist.strings in Resources */,
 				374ED47A18EFFD6400D3FE6B /* MenuViewController.xib in Resources */,
+				3739139318F9B44700899025 /* Check.png in Resources */,
+				37C1EC7E18FC378E007428B8 /* rank normal.png in Resources */,
+				37C1EC8018FC38BC007428B8 /* play clicked.png in Resources */,
+				37C1EC8218FC39CB007428B8 /* rate clicked.png in Resources */,
+				37C1EC7718FC2711007428B8 /* wrong clicked.png in Resources */,
 				374ED45518EFF8C900D3FE6B /* Images.xcassets in Resources */,
+				37C1EC7A18FC305B007428B8 /* play normal.png in Resources */,
+				37C1EC7818FC2711007428B8 /* wrong normal.png in Resources */,
+				37C1EC8418FC3AA8007428B8 /* rank clicked.png in Resources */,
+				37C1EC7C18FC35D1007428B8 /* rate normal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +442,7 @@
 			files = (
 				374ED47E18F002E300D3FE6B /* PlayViewController.m in Sources */,
 				A4A6557618F156DD00F1C968 /* FacebookActivity.m in Sources */,
+				3739139818F9B78600899025 /* NiceButton.m in Sources */,
 				A4A6557418F156DD00F1C968 /* ApActivityData.m in Sources */,
 				A4A6558418F15FC300F1C968 /* GameKitHelper.m in Sources */,
 				374ED45318EFF8C900D3FE6B /* AppDelegate.m in Sources */,
@@ -494,8 +564,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hoang Le (44T52VC842)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hoang Le (44T52VC842)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TerrificMath",
@@ -515,8 +585,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: LE HOANG (TMD3Y97MSH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: LE HOANG (TMD3Y97MSH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TerrificMath",
