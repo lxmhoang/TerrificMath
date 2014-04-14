@@ -36,6 +36,8 @@
 		37C1EC8018FC38BC007428B8 /* play clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC7F18FC38BC007428B8 /* play clicked.png */; };
 		37C1EC8218FC39CB007428B8 /* rate clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC8118FC39CB007428B8 /* rate clicked.png */; };
 		37C1EC8418FC3AA8007428B8 /* rank clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC8318FC3AA8007428B8 /* rank clicked.png */; };
+		37C1EC8618FC3CE1007428B8 /* menu normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC8518FC3CE1007428B8 /* menu normal.png */; };
+		37C1EC8818FC3F09007428B8 /* menu clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC8718FC3F09007428B8 /* menu clicked.png */; };
 		A4A6557418F156DD00F1C968 /* ApActivityData.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6556D18F156DD00F1C968 /* ApActivityData.m */; };
 		A4A6557618F156DD00F1C968 /* FacebookActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6557318F156DD00F1C968 /* FacebookActivity.m */; };
 		A4A6557818F156F700F1C968 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A6557718F156F700F1C968 /* Social.framework */; };
@@ -91,6 +93,8 @@
 		37C1EC7F18FC38BC007428B8 /* play clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play clicked.png"; sourceTree = "<group>"; };
 		37C1EC8118FC39CB007428B8 /* rate clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rate clicked.png"; sourceTree = "<group>"; };
 		37C1EC8318FC3AA8007428B8 /* rank clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rank clicked.png"; sourceTree = "<group>"; };
+		37C1EC8518FC3CE1007428B8 /* menu normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu normal.png"; sourceTree = "<group>"; };
+		37C1EC8718FC3F09007428B8 /* menu clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu clicked.png"; sourceTree = "<group>"; };
 		A4A6556C18F156DD00F1C968 /* ApActivityData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApActivityData.h; sourceTree = "<group>"; };
 		A4A6556D18F156DD00F1C968 /* ApActivityData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApActivityData.m; sourceTree = "<group>"; };
 		A4A6556E18F156DD00F1C968 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 		374ED44918EFF8C900D3FE6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				37C1EC8718FC3F09007428B8 /* menu clicked.png */,
+				37C1EC8518FC3CE1007428B8 /* menu normal.png */,
 				37C1EC8318FC3AA8007428B8 /* rank clicked.png */,
 				37C1EC8118FC39CB007428B8 /* rate clicked.png */,
 				37C1EC7F18FC38BC007428B8 /* play clicked.png */,
@@ -408,6 +414,8 @@
 			files = (
 				37C1EC7218FC2107007428B8 /* right normal.png in Resources */,
 				37C1EC7418FC270A007428B8 /* right clicked.png in Resources */,
+				37C1EC8618FC3CE1007428B8 /* menu normal.png in Resources */,
+				37C1EC8818FC3F09007428B8 /* menu clicked.png in Resources */,
 				374ED47F18F002E300D3FE6B /* PlayViewController.xib in Resources */,
 				3739139218F9B44700899025 /* Delete.png in Resources */,
 				374ED44D18EFF8C900D3FE6B /* InfoPlist.strings in Resources */,
