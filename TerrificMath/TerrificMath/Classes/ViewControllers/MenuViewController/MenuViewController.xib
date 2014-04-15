@@ -55,8 +55,16 @@
                         <action selector="rankBtnAction:" destination="-1" eventType="touchUpInside" id="20V-gs-UKd"/>
                     </connections>
                 </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="One Second" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg0-aV-I1h">
+                    <rect key="frame" x="68" y="110" width="185" height="102"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.20887012585738884" green="0.41121598107451818" blue="0.46245216836734693" alpha="1" colorSpace="calibratedRGB"/>
             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

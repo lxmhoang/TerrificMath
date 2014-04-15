@@ -7,8 +7,9 @@
 //
 
 #define kHeightOfProgressView 4
-#define kTimeToAnswer 1.5
+#define kTimeToAnswer 1.2
 #import "PlayViewController.h"
+#import "MenuViewController.h"
 
 @interface PlayViewController ()
 
@@ -46,16 +47,12 @@ bool stop = NO;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [correctBtn setBackgroundImage:[UIImage imageNamed:@"right clicked.png"] forState:UIControlStateSelected];
-//    [wrongBtn setBackgroundImage:[UIImage imageNamed:@"wrong clicked.png"] forState:UIControlStateSelected];
-    
-    // Do any additional setup after loading the view from its nib.
+    point = 0;
+    pointLabel.text =@"0";
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    point = 0;
-    pointLabel.text =@"0";
     [self newGame];
     
 }
@@ -80,19 +77,12 @@ bool stop = NO;
     
     [self.view setBackgroundColor:color];
     
-    correctBtn.enabled = YES;
-    wrongBtn.enabled = YES;
+    correctBtn.userInteractionEnabled = YES;
+    wrongBtn.userInteractionEnabled = YES;
     
-    int difficult;
-    if (point<9)
-        difficult = 5;
-    else
-        difficult = 10;
     
-//    NSLog(@"difficult : %d", difficult);
-    
-    x = arc4random_uniform(difficult)+1+difficult-5;;
-    y = arc4random_uniform(difficult)+x+3;
+    x = arc4random_uniform(8)+1;
+    y = x+arc4random_uniform(15-x)+1;
     
     BOOL equal = arc4random_uniform(99) %2;
     
@@ -101,14 +91,34 @@ bool stop = NO;
     else
         NSLog(@"khac");
     
-    z = equal ? x+y : x+y-arc4random_uniform(4)+arc4random_uniform(8);
+    z = equal ? x+y : x+y-arc4random_uniform(2)+arc4random_uniform(4);
     
     
-    if (z==x+y)
-        z++;
+//    if (z==x+y)
+//        z++;
    
     equationLabel.text = [NSString stringWithFormat:@"%d + %d", x, y];
-    resultLabel.text = [NSString stringWithFormat:@"%d", z];
+    resultLabel.text = [NSString stringWithFormat:@"= %d", z];
+    
+    
+    CGRect frame = equationLabel.frame;
+    frame.origin.x = 320;
+    equationLabel.frame = frame;
+    frame = resultLabel.frame;
+    frame.origin.x = 320;
+    resultLabel.frame = frame;
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        CGRect frame = equationLabel.frame;
+        frame.origin.x = 0;
+        equationLabel.frame = frame;
+    }];
+    [UIView animateWithDuration:0.2 animations:^{
+        CGRect frame = resultLabel.frame;
+        frame.origin.x = 0;
+        resultLabel.frame = frame;
+    }];
+    
     hiddenAnswer = (x+y) == z;
     [progressView setFrame:CGRectMake(0, 0, 320, kHeightOfProgressView)];
     
@@ -135,10 +145,11 @@ bool stop = NO;
     [self gameOver];
 }
 
+
 - (void)answerIsGiven
 {
-    correctBtn.enabled = NO;
-    wrongBtn.enabled = NO;
+    correctBtn.userInteractionEnabled = NO;
+    wrongBtn.userInteractionEnabled = NO;
     [progressView.layer removeAllAnimations];
     [progressView setFrame:CGRectMake(0, 0, 320, kHeightOfProgressView)];
     
