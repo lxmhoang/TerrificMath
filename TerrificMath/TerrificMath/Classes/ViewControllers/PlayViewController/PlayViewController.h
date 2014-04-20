@@ -32,5 +32,6 @@
 - (IBAction)wrongBtnAction:(id)sender;
 - (IBAction)playBtnAction:(id)sender;
 - (IBAction)shareBtnAction:(id)sender;
+- (IBAction)menuBtnAction:(id)sender;
 
 @end

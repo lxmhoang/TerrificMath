@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface MenuViewController : UIViewController <GKGameCenterControllerDelegate>
+@interface MenuViewController : UIViewController <GKGameCenterControllerDelegate, ADBannerViewDelegate>
+{
+    ADBannerView *bannerView;
+}
 
 @property (weak, nonatomic) IBOutlet UIButton *playBtn;
 @property (weak, nonatomic) IBOutlet UIButton *rateBtn;

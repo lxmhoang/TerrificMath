@@ -10,6 +10,7 @@
 #define kTimeToAnswer 1.2
 #import "PlayViewController.h"
 #import "MenuViewController.h"
+#import "ApActivityData.h"
 
 @interface PlayViewController ()
 
@@ -46,6 +47,8 @@ bool stop = NO;
 
 - (void)viewDidLoad
 {
+    [gameOverView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"gameoverview.png"]]];
+    
     [super viewDidLoad];
     point = 0;
     pointLabel.text =@"0";
@@ -94,8 +97,8 @@ bool stop = NO;
     z = equal ? x+y : x+y-arc4random_uniform(2)+arc4random_uniform(4);
     
     
-//    if (z==x+y)
-//        z++;
+    if (z==x+y)
+        z++;
    
     equationLabel.text = [NSString stringWithFormat:@"%d + %d", x, y];
     resultLabel.text = [NSString stringWithFormat:@"= %d", z];
@@ -169,6 +172,8 @@ bool stop = NO;
 
 - (void)gameOver
 {
+    [[NSUserDefaults standardUserDefaults] setInteger:point forKey:kLatestPoint];
+    
     if (point > [[NSUserDefaults standardUserDefaults] integerForKey:kHighestPoint])
     {
         [[NSUserDefaults standardUserDefaults] setInteger:point forKey:kHighestPoint];
@@ -183,7 +188,7 @@ bool stop = NO;
     
     gameOverView.alpha = 1;
     [UIView animateWithDuration:0.15 animations:^{
-        [gameOverView setFrame:CGRectMake(30, 120, gameOverView.frame.size.width, gameOverView.frame.size.height)];
+        [gameOverView setFrame:CGRectMake(30, 60, gameOverView.frame.size.width, gameOverView.frame.size.height)];
     } completion:^(BOOL finished) {
         nil;
     }];
@@ -230,6 +235,39 @@ bool stop = NO;
 }
 
 - (IBAction)shareBtnAction:(id)sender {
+    if( [UIActivityViewController class] )
+    {
+        UIGraphicsBeginImageContext(self.view.bounds.size);
+        [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+        UIImage *ImageAtt = UIGraphicsGetImageFromCurrentImageContext();
+        
+        APActivityProvider *ActivityProvider = [[APActivityProvider alloc] init];
+        NSArray *Items = @[ActivityProvider, ImageAtt];
+        
+        
+        UIActivityViewController *aVC = [[UIActivityViewController alloc] initWithActivityItems:Items applicationActivities:nil];
+        
+        NSMutableArray *listDisableItems = [[NSMutableArray alloc] initWithObjects:UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypePrint,  UIActivityTypePostToWeibo, UIActivityTypeAirDrop, UIActivityTypeSaveToCameraRoll, nil];
+        
+        [aVC setExcludedActivityTypes:listDisableItems];
+        
+        [aVC setCompletionHandler:^(NSString *activityType, BOOL completed){
+            NSLog(@"activity Type : %@", activityType);
+            if (completed)
+            {
+               
+            }
+        }];
+        
+        [self  presentViewController:aVC animated:YES completion:nil];
+    }else{
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Sorry" message:@"This feature is only available in IOS 6 and above" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+}
+
+- (IBAction)menuBtnAction:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

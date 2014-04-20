@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "374ED43E18EFF8C900D3FE6B"
-               BuildableName = "TerrificMath.app"
-               BlueprintName = "TerrificMath"
-               ReferencedContainer = "container:TerrificMath.xcodeproj">
+               BuildableName = "One Second.app"
+               BlueprintName = "One Second"
+               ReferencedContainer = "container:One Second.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "374ED45918EFF8C900D3FE6B"
-               BuildableName = "TerrificMathTests.xctest"
-               BlueprintName = "TerrificMathTests"
-               ReferencedContainer = "container:TerrificMath.xcodeproj">
+               BuildableName = "One SecondTests.xctest"
+               BlueprintName = "One SecondTests"
+               ReferencedContainer = "container:One Second.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "374ED43E18EFF8C900D3FE6B"
-            BuildableName = "TerrificMath.app"
-            BlueprintName = "TerrificMath"
-            ReferencedContainer = "container:TerrificMath.xcodeproj">
+            BuildableName = "One Second.app"
+            BlueprintName = "One Second"
+            ReferencedContainer = "container:One Second.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "374ED43E18EFF8C900D3FE6B"
-            BuildableName = "TerrificMath.app"
-            BlueprintName = "TerrificMath"
-            ReferencedContainer = "container:TerrificMath.xcodeproj">
+            BuildableName = "One Second.app"
+            BlueprintName = "One Second"
+            ReferencedContainer = "container:One Second.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "374ED43E18EFF8C900D3FE6B"
-            BuildableName = "TerrificMath.app"
-            BlueprintName = "TerrificMath"
-            ReferencedContainer = "container:TerrificMath.xcodeproj">
+            BuildableName = "One Second.app"
+            BlueprintName = "One Second"
+            ReferencedContainer = "container:One Second.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

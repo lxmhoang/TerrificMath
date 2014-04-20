@@ -22,23 +22,24 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"noads"])
+        {
+            if ([ADBannerView instancesRespondToSelector:@selector(initWithAdType:)]) {
+                bannerView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
+            } else {
+                bannerView = [[ADBannerView alloc] init];
+            }
+            bannerView.delegate = self;
+        }
 
     }
     return self;
 }
 
-- (void)test
-{
-    NSLog(@"2");
-}
-
-- (void)test2
-{
-    NSLog(@"3");
-}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view addSubview:bannerView];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -75,4 +76,75 @@
 {
     [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark layOutAnimated
+
+- (void)layoutAnimated:(BOOL)animated
+{
+    // As of iOS 6.0, the banner will automatically resize itself based on its width.
+    // To support iOS 5.0 however, we continue to set the currentContentSizeIdentifier appropriately.
+    CGRect contentFrame = self.view.bounds;
+//    if (contentFrame.size.width < contentFrame.size.height) {
+//        bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
+//    } else {
+//        bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;
+//    }
+    
+    
+    
+    CGRect bannerFrame = bannerView.frame;
+    if (bannerView.bannerLoaded) {
+        NSLog(@"ads loaded !");
+//        contentFrame.size.height -= bannerView.frame.size.height;
+        bannerFrame.origin.y = contentFrame.size.height - bannerFrame.size.height;
+    } else {
+        NSLog(@"ads NOT loaded !");
+        bannerFrame.origin.y = contentFrame.size.height;
+    }
+    
+    //    if (_bannerView.bannerLoaded){
+    [UIView animateWithDuration:animated ? 0 : 0.0 animations:^{
+        self.view.frame = contentFrame;
+        [self.view layoutIfNeeded];
+        bannerView.frame = bannerFrame;
+    }];
+    //    }else{
+    //        NSLog(@"Banner not loaded");
+    //    }
+}
+
+
+#pragma mark Bannerview delegate
+
+- (void)viewDidLayoutSubviews
+{
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"noads"])
+    {
+        [self layoutAnimated:[UIView areAnimationsEnabled]];
+    }
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    [self layoutAnimated:YES];
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    NSLog(@"error log : %@",error);
+    [self layoutAnimated:YES];
+}
+
+- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
+{
+    
+    return YES;
+}
+
+- (void)bannerViewActionDidFinish:(ADBannerView *)banner
+{
+    
+}
+
+
 @end

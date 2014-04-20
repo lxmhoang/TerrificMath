@@ -26,6 +26,16 @@
 		374ED47A18EFFD6400D3FE6B /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374ED47818EFFD6400D3FE6B /* MenuViewController.xib */; };
 		374ED47E18F002E300D3FE6B /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ED47C18F002E300D3FE6B /* PlayViewController.m */; };
 		374ED47F18F002E300D3FE6B /* PlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374ED47D18F002E300D3FE6B /* PlayViewController.xib */; };
+		37C128731901229600A9E682 /* share clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C128721901229600A9E682 /* share clicked.png */; };
+		37C12875190122A700A9E682 /* share normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C12874190122A700A9E682 /* share normal.png */; };
+		37C1287719012E9200A9E682 /* bg gameover.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1287619012E9100A9E682 /* bg gameover.png */; };
+		37C128791902D91600A9E682 /* gameoverview.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C128781902D91500A9E682 /* gameoverview.png */; };
+		37C1288D1903A34400A9E682 /* logo57.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C128871903A34400A9E682 /* logo57.png */; };
+		37C1288E1903A34400A9E682 /* logo58.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C128881903A34400A9E682 /* logo58.png */; };
+		37C1288F1903A34400A9E682 /* logo80.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C128891903A34400A9E682 /* logo80.png */; };
+		37C128901903A34400A9E682 /* logo114.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1288A1903A34400A9E682 /* logo114.png */; };
+		37C128911903A34400A9E682 /* logo120.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1288B1903A34400A9E682 /* logo120.png */; };
+		37C128931903A38800A9E682 /* logo29.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C128921903A38800A9E682 /* logo29.png */; };
 		37C1EC7218FC2107007428B8 /* right normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC7118FC2107007428B8 /* right normal.png */; };
 		37C1EC7418FC270A007428B8 /* right clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC7318FC270A007428B8 /* right clicked.png */; };
 		37C1EC7718FC2711007428B8 /* wrong clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC7518FC2711007428B8 /* wrong clicked.png */; };
@@ -38,6 +48,7 @@
 		37C1EC8418FC3AA8007428B8 /* rank clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC8318FC3AA8007428B8 /* rank clicked.png */; };
 		37C1EC8618FC3CE1007428B8 /* menu normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC8518FC3CE1007428B8 /* menu normal.png */; };
 		37C1EC8818FC3F09007428B8 /* menu clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1EC8718FC3F09007428B8 /* menu clicked.png */; };
+		37C567F2190407440016C8FC /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C567F1190407440016C8FC /* iAd.framework */; };
 		A4A6557418F156DD00F1C968 /* ApActivityData.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6556D18F156DD00F1C968 /* ApActivityData.m */; };
 		A4A6557618F156DD00F1C968 /* FacebookActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6557318F156DD00F1C968 /* FacebookActivity.m */; };
 		A4A6557818F156F700F1C968 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A6557718F156F700F1C968 /* Social.framework */; };
@@ -61,20 +72,20 @@
 		3739139118F9B44700899025 /* Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Check.png; sourceTree = "<group>"; };
 		3739139618F9B78600899025 /* NiceButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NiceButton.h; sourceTree = "<group>"; };
 		3739139718F9B78600899025 /* NiceButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NiceButton.m; sourceTree = "<group>"; };
-		374ED43F18EFF8C900D3FE6B /* TerrificMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerrificMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		374ED43F18EFF8C900D3FE6B /* One Second.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "One Second.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		374ED44218EFF8C900D3FE6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		374ED44418EFF8C900D3FE6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		374ED44618EFF8C900D3FE6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		374ED44A18EFF8C900D3FE6B /* TerrificMath-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TerrificMath-Info.plist"; sourceTree = "<group>"; };
+		374ED44A18EFF8C900D3FE6B /* One Second-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "One Second-Info.plist"; sourceTree = "<group>"; };
 		374ED44C18EFF8C900D3FE6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		374ED44E18EFF8C900D3FE6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		374ED45018EFF8C900D3FE6B /* TerrificMath-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TerrificMath-Prefix.pch"; sourceTree = "<group>"; };
 		374ED45118EFF8C900D3FE6B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		374ED45218EFF8C900D3FE6B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		374ED45418EFF8C900D3FE6B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		374ED45A18EFF8C900D3FE6B /* TerrificMathTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TerrificMathTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		374ED45A18EFF8C900D3FE6B /* One SecondTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "One SecondTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		374ED45B18EFF8C900D3FE6B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		374ED46318EFF8C900D3FE6B /* TerrificMathTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TerrificMathTests-Info.plist"; sourceTree = "<group>"; };
+		374ED46318EFF8C900D3FE6B /* One SecondTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "One SecondTests-Info.plist"; sourceTree = "<group>"; };
 		374ED46518EFF8C900D3FE6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		374ED46718EFF8C900D3FE6B /* TerrificMathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerrificMathTests.m; sourceTree = "<group>"; };
 		374ED47618EFFD6400D3FE6B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
@@ -83,6 +94,16 @@
 		374ED47B18F002E300D3FE6B /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
 		374ED47C18F002E300D3FE6B /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
 		374ED47D18F002E300D3FE6B /* PlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayViewController.xib; sourceTree = "<group>"; };
+		37C128721901229600A9E682 /* share clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share clicked.png"; sourceTree = "<group>"; };
+		37C12874190122A700A9E682 /* share normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share normal.png"; sourceTree = "<group>"; };
+		37C1287619012E9100A9E682 /* bg gameover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg gameover.png"; sourceTree = "<group>"; };
+		37C128781902D91500A9E682 /* gameoverview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameoverview.png; sourceTree = "<group>"; };
+		37C128871903A34400A9E682 /* logo57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo57.png; sourceTree = "<group>"; };
+		37C128881903A34400A9E682 /* logo58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo58.png; sourceTree = "<group>"; };
+		37C128891903A34400A9E682 /* logo80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo80.png; sourceTree = "<group>"; };
+		37C1288A1903A34400A9E682 /* logo114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo114.png; sourceTree = "<group>"; };
+		37C1288B1903A34400A9E682 /* logo120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo120.png; sourceTree = "<group>"; };
+		37C128921903A38800A9E682 /* logo29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo29.png; sourceTree = "<group>"; };
 		37C1EC7118FC2107007428B8 /* right normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right normal.png"; sourceTree = "<group>"; };
 		37C1EC7318FC270A007428B8 /* right clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right clicked.png"; sourceTree = "<group>"; };
 		37C1EC7518FC2711007428B8 /* wrong clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wrong clicked.png"; sourceTree = "<group>"; };
@@ -95,6 +116,7 @@
 		37C1EC8318FC3AA8007428B8 /* rank clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rank clicked.png"; sourceTree = "<group>"; };
 		37C1EC8518FC3CE1007428B8 /* menu normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu normal.png"; sourceTree = "<group>"; };
 		37C1EC8718FC3F09007428B8 /* menu clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu clicked.png"; sourceTree = "<group>"; };
+		37C567F1190407440016C8FC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		A4A6556C18F156DD00F1C968 /* ApActivityData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApActivityData.h; sourceTree = "<group>"; };
 		A4A6556D18F156DD00F1C968 /* ApActivityData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApActivityData.m; sourceTree = "<group>"; };
 		A4A6556E18F156DD00F1C968 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
@@ -113,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C567F2190407440016C8FC /* iAd.framework in Frameworks */,
 				A4A6557A18F1575C00F1C968 /* FacebookSDK.framework in Frameworks */,
 				A4A6557818F156F700F1C968 /* Social.framework in Frameworks */,
 				374ED44518EFF8C900D3FE6B /* CoreGraphics.framework in Frameworks */,
@@ -165,8 +188,8 @@
 		374ED44018EFF8C900D3FE6B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				374ED43F18EFF8C900D3FE6B /* TerrificMath.app */,
-				374ED45A18EFF8C900D3FE6B /* TerrificMathTests.xctest */,
+				374ED43F18EFF8C900D3FE6B /* One Second.app */,
+				374ED45A18EFF8C900D3FE6B /* One SecondTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,6 +197,7 @@
 		374ED44118EFF8C900D3FE6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37C567F1190407440016C8FC /* iAd.framework */,
 				A4A6558618F1634800F1C968 /* GameKit.framework */,
 				A4A6557918F1575C00F1C968 /* FacebookSDK.framework */,
 				A4A6557718F156F700F1C968 /* Social.framework */,
@@ -201,6 +225,16 @@
 		374ED44918EFF8C900D3FE6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				37C128921903A38800A9E682 /* logo29.png */,
+				37C128871903A34400A9E682 /* logo57.png */,
+				37C128881903A34400A9E682 /* logo58.png */,
+				37C128891903A34400A9E682 /* logo80.png */,
+				37C1288A1903A34400A9E682 /* logo114.png */,
+				37C1288B1903A34400A9E682 /* logo120.png */,
+				37C128781902D91500A9E682 /* gameoverview.png */,
+				37C1287619012E9100A9E682 /* bg gameover.png */,
+				37C12874190122A700A9E682 /* share normal.png */,
+				37C128721901229600A9E682 /* share clicked.png */,
 				37C1EC8718FC3F09007428B8 /* menu clicked.png */,
 				37C1EC8518FC3CE1007428B8 /* menu normal.png */,
 				37C1EC8318FC3AA8007428B8 /* rank clicked.png */,
@@ -215,7 +249,7 @@
 				37C1EC7118FC2107007428B8 /* right normal.png */,
 				3739139018F9B44700899025 /* Delete.png */,
 				3739139118F9B44700899025 /* Check.png */,
-				374ED44A18EFF8C900D3FE6B /* TerrificMath-Info.plist */,
+				374ED44A18EFF8C900D3FE6B /* One Second-Info.plist */,
 				374ED44B18EFF8C900D3FE6B /* InfoPlist.strings */,
 				374ED44E18EFF8C900D3FE6B /* main.m */,
 				374ED45018EFF8C900D3FE6B /* TerrificMath-Prefix.pch */,
@@ -235,7 +269,7 @@
 		374ED46218EFF8C900D3FE6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				374ED46318EFF8C900D3FE6B /* TerrificMathTests-Info.plist */,
+				374ED46318EFF8C900D3FE6B /* One SecondTests-Info.plist */,
 				374ED46418EFF8C900D3FE6B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -291,10 +325,10 @@
 		A4A6556A18F156DD00F1C968 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A4A6557118F156DD00F1C968 /* FacebookActivity */,
 				A4A6558118F15EC600F1C968 /* GameKitHelper */,
 				A4A6556B18F156DD00F1C968 /* ApActivityData */,
 				A4A6556E18F156DD00F1C968 /* Common.h */,
-				A4A6557118F156DD00F1C968 /* FacebookActivity */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -329,9 +363,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		374ED43E18EFF8C900D3FE6B /* TerrificMath */ = {
+		374ED43E18EFF8C900D3FE6B /* One Second */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 374ED46B18EFF8C900D3FE6B /* Build configuration list for PBXNativeTarget "TerrificMath" */;
+			buildConfigurationList = 374ED46B18EFF8C900D3FE6B /* Build configuration list for PBXNativeTarget "One Second" */;
 			buildPhases = (
 				374ED43B18EFF8C900D3FE6B /* Sources */,
 				374ED43C18EFF8C900D3FE6B /* Frameworks */,
@@ -341,14 +375,14 @@
 			);
 			dependencies = (
 			);
-			name = TerrificMath;
+			name = "One Second";
 			productName = TerrificMath;
-			productReference = 374ED43F18EFF8C900D3FE6B /* TerrificMath.app */;
+			productReference = 374ED43F18EFF8C900D3FE6B /* One Second.app */;
 			productType = "com.apple.product-type.application";
 		};
-		374ED45918EFF8C900D3FE6B /* TerrificMathTests */ = {
+		374ED45918EFF8C900D3FE6B /* One SecondTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 374ED46E18EFF8C900D3FE6B /* Build configuration list for PBXNativeTarget "TerrificMathTests" */;
+			buildConfigurationList = 374ED46E18EFF8C900D3FE6B /* Build configuration list for PBXNativeTarget "One SecondTests" */;
 			buildPhases = (
 				374ED45618EFF8C900D3FE6B /* Sources */,
 				374ED45718EFF8C900D3FE6B /* Frameworks */,
@@ -359,9 +393,9 @@
 			dependencies = (
 				374ED46018EFF8C900D3FE6B /* PBXTargetDependency */,
 			);
-			name = TerrificMathTests;
+			name = "One SecondTests";
 			productName = TerrificMathTests;
-			productReference = 374ED45A18EFF8C900D3FE6B /* TerrificMathTests.xctest */;
+			productReference = 374ED45A18EFF8C900D3FE6B /* One SecondTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -389,7 +423,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 374ED43A18EFF8C900D3FE6B /* Build configuration list for PBXProject "TerrificMath" */;
+			buildConfigurationList = 374ED43A18EFF8C900D3FE6B /* Build configuration list for PBXProject "One Second" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -401,8 +435,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				374ED43E18EFF8C900D3FE6B /* TerrificMath */,
-				374ED45918EFF8C900D3FE6B /* TerrificMathTests */,
+				374ED43E18EFF8C900D3FE6B /* One Second */,
+				374ED45918EFF8C900D3FE6B /* One SecondTests */,
 			);
 		};
 /* End PBXProject section */
@@ -412,17 +446,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C128791902D91600A9E682 /* gameoverview.png in Resources */,
 				37C1EC7218FC2107007428B8 /* right normal.png in Resources */,
+				37C128911903A34400A9E682 /* logo120.png in Resources */,
+				37C1288D1903A34400A9E682 /* logo57.png in Resources */,
 				37C1EC7418FC270A007428B8 /* right clicked.png in Resources */,
 				37C1EC8618FC3CE1007428B8 /* menu normal.png in Resources */,
+				37C12875190122A700A9E682 /* share normal.png in Resources */,
+				37C1288E1903A34400A9E682 /* logo58.png in Resources */,
+				37C128731901229600A9E682 /* share clicked.png in Resources */,
 				37C1EC8818FC3F09007428B8 /* menu clicked.png in Resources */,
 				374ED47F18F002E300D3FE6B /* PlayViewController.xib in Resources */,
 				3739139218F9B44700899025 /* Delete.png in Resources */,
 				374ED44D18EFF8C900D3FE6B /* InfoPlist.strings in Resources */,
+				37C128931903A38800A9E682 /* logo29.png in Resources */,
 				374ED47A18EFFD6400D3FE6B /* MenuViewController.xib in Resources */,
 				3739139318F9B44700899025 /* Check.png in Resources */,
+				37C1287719012E9200A9E682 /* bg gameover.png in Resources */,
 				37C1EC7E18FC378E007428B8 /* rank normal.png in Resources */,
+				37C128901903A34400A9E682 /* logo114.png in Resources */,
 				37C1EC8018FC38BC007428B8 /* play clicked.png in Resources */,
+				37C1288F1903A34400A9E682 /* logo80.png in Resources */,
 				37C1EC8218FC39CB007428B8 /* rate clicked.png in Resources */,
 				37C1EC7718FC2711007428B8 /* wrong clicked.png in Resources */,
 				374ED45518EFF8C900D3FE6B /* Images.xcassets in Resources */,
@@ -472,7 +516,7 @@
 /* Begin PBXTargetDependency section */
 		374ED46018EFF8C900D3FE6B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 374ED43E18EFF8C900D3FE6B /* TerrificMath */;
+			target = 374ED43E18EFF8C900D3FE6B /* One Second */;
 			targetProxy = 374ED45F18EFF8C900D3FE6B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -529,8 +573,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "One Second";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -561,7 +606,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "One Second";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -570,7 +616,6 @@
 		374ED46C18EFF8C900D3FE6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hoang Le (44T52VC842)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hoang Le (44T52VC842)";
@@ -579,10 +624,10 @@
 					"$(PROJECT_DIR)/TerrificMath",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TerrificMath/TerrificMath-Prefix.pch";
-				INFOPLIST_FILE = "TerrificMath/TerrificMath-Info.plist";
+				GCC_PREFIX_HEADER = "TerrificMath/One Second-Prefix.pch";
+				INFOPLIST_FILE = "TerrificMath/One Second-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "One Second";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -591,7 +636,6 @@
 		374ED46D18EFF8C900D3FE6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: LE HOANG (TMD3Y97MSH)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: LE HOANG (TMD3Y97MSH)";
@@ -600,10 +644,10 @@
 					"$(PROJECT_DIR)/TerrificMath",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TerrificMath/TerrificMath-Prefix.pch";
-				INFOPLIST_FILE = "TerrificMath/TerrificMath-Info.plist";
+				GCC_PREFIX_HEADER = "TerrificMath/One Second-Prefix.pch";
+				INFOPLIST_FILE = "TerrificMath/One Second-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "One Second";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -624,8 +668,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "TerrificMathTests/TerrificMathTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "TerrificMathTests/One SecondTests-Info.plist";
+				PRODUCT_NAME = "One SecondTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -642,8 +686,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TerrificMath/TerrificMath-Prefix.pch";
-				INFOPLIST_FILE = "TerrificMathTests/TerrificMathTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "TerrificMathTests/One SecondTests-Info.plist";
+				PRODUCT_NAME = "One SecondTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -652,7 +696,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		374ED43A18EFF8C900D3FE6B /* Build configuration list for PBXProject "TerrificMath" */ = {
+		374ED43A18EFF8C900D3FE6B /* Build configuration list for PBXProject "One Second" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				374ED46918EFF8C900D3FE6B /* Debug */,
@@ -661,7 +705,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		374ED46B18EFF8C900D3FE6B /* Build configuration list for PBXNativeTarget "TerrificMath" */ = {
+		374ED46B18EFF8C900D3FE6B /* Build configuration list for PBXNativeTarget "One Second" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				374ED46C18EFF8C900D3FE6B /* Debug */,
@@ -670,7 +714,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		374ED46E18EFF8C900D3FE6B /* Build configuration list for PBXNativeTarget "TerrificMathTests" */ = {
+		374ED46E18EFF8C900D3FE6B /* Build configuration list for PBXNativeTarget "One SecondTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				374ED46F18EFF8C900D3FE6B /* Debug */,

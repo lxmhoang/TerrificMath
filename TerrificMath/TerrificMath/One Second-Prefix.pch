@@ -7,6 +7,9 @@
 #import <Availability.h>
 
 #define kHighestPoint @"highestPoint"
+#define kLatestPoint @"lastestPoint"
+
+#define appURL @"https://itunes.apple.com/app/id862863452"
 
 #define kHighScoreLeaderboardCategory @"HighScores"
 

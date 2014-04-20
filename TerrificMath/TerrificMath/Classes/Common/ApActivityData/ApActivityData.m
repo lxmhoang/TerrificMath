@@ -12,17 +12,18 @@
 - (id) activityViewController:(UIActivityViewController *)activityViewController
           itemForActivityType:(NSString *)activityType
 {
+    
+    NSString *message = [NSString stringWithFormat:@"Just scored %d points at One Second, a game which you have only 1 second to solve a math in each round %@  ", [[NSUserDefaults standardUserDefaults] integerForKey:kLatestPoint], appURL];
+    
     if ( [activityType isEqualToString:UIActivityTypePostToTwitter] )
-        return @"This is a #twitter post!";
+        return message;
     if ( [activityType isEqualToString:UIActivityTypePostToFacebook] )
-        return @"This is a facebook post!";
+        return message;
     if ( [activityType isEqualToString:UIActivityTypeMessage] )
-        return @"SMS message text";
+        return message;
     if ( [activityType isEqualToString:UIActivityTypeMail] )
-        return @"Email text here!";
-    if ( [activityType isEqualToString:@"it.albertopasca.myApp"] )
-        return @"OpenMyapp custom text";
-    return nil;
+        return message;
+    return message;
 }
 - (id) activityViewControllerPlaceholderItem:(UIActivityViewController *)activityViewController { return @""; }
 @end
