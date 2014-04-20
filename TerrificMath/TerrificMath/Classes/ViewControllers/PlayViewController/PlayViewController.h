@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface PlayViewController : UIViewController
+@interface PlayViewController : UIViewController <ADBannerViewDelegate>
 {
     int point, x, y, z;
     BOOL hiddenAnswer, answerGivenIsCorrect;
     NSArray *listColor;
+    ADBannerView *bannerView;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *pointLabel;

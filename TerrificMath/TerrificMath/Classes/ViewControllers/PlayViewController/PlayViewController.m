@@ -41,6 +41,16 @@ bool stop = NO;
                       
                       
                       ];
+        
+        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"noads"])
+        {
+            if ([ADBannerView instancesRespondToSelector:@selector(initWithAdType:)]) {
+                bannerView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
+            } else {
+                bannerView = [[ADBannerView alloc] init];
+            }
+            bannerView.delegate = self;
+        }
     }
     return self;
 }
@@ -50,6 +60,10 @@ bool stop = NO;
     [gameOverView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"gameoverview.png"]]];
     
     [super viewDidLoad];
+    
+    [self.view addSubview:bannerView];
+    bannerView.alpha = 0;
+    
     point = 0;
     pointLabel.text =@"0";
 }
@@ -67,6 +81,8 @@ bool stop = NO;
 
 - (void)newGame
 {
+    [bestScoreLabel setTextColor:[UIColor whiteColor]];
+    bannerView.alpha = 0;
     UIColor *bgColor = self.view.backgroundColor;
     
     UIColor *color = [listColor objectAtIndex:(rand()%(listColor.count-1))];
@@ -96,9 +112,6 @@ bool stop = NO;
     
     z = equal ? x+y : x+y-arc4random_uniform(2)+arc4random_uniform(4);
     
-    
-    if (z==x+y)
-        z++;
    
     equationLabel.text = [NSString stringWithFormat:@"%d + %d", x, y];
     resultLabel.text = [NSString stringWithFormat:@"= %d", z];
@@ -165,13 +178,14 @@ bool stop = NO;
     }else
     {
         NSLog(@"wrong answer !!!");
-        [self gameOver];
+        [self earthquake:self.view];
     }
     
 }
 
 - (void)gameOver
 {
+    bannerView.alpha = 1;
     [[NSUserDefaults standardUserDefaults] setInteger:point forKey:kLatestPoint];
     
     if (point > [[NSUserDefaults standardUserDefaults] integerForKey:kHighestPoint])
@@ -180,10 +194,14 @@ bool stop = NO;
         [[GameKitHelper sharedGameKitHelper]
          submitScore:(int64_t)point
          category:kHighScoreLeaderboardCategory];
+        
+        [bestScoreLabel setTextColor:[UIColor yellowColor]];
     }
     
+    
+    
     AnewScoreLabel.text = [NSString stringWithFormat:@"%d",point];
-    bestScoreLabel.text = [NSString stringWithFormat:@"%d", [[NSUserDefaults standardUserDefaults] integerForKey:kHighestPoint]];
+    bestScoreLabel.text = [NSString stringWithFormat:@"%ld", (long)[[NSUserDefaults standardUserDefaults] integerForKey:kHighestPoint]];
     
     
     gameOverView.alpha = 1;
@@ -269,6 +287,104 @@ bool stop = NO;
 - (IBAction)menuBtnAction:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+#pragma mark layOutAnimated
+
+- (void)layoutAnimated:(BOOL)animated
+{
+    // As of iOS 6.0, the banner will automatically resize itself based on its width.
+    // To support iOS 5.0 however, we continue to set the currentContentSizeIdentifier appropriately.
+    CGRect contentFrame = self.view.bounds;
+    //    if (contentFrame.size.width < contentFrame.size.height) {
+    //        bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
+    //    } else {
+    //        bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;
+    //    }
+    
+    
+    
+    CGRect bannerFrame = bannerView.frame;
+    if (bannerView.bannerLoaded) {
+        NSLog(@"ads loaded !");
+        //        contentFrame.size.height -= bannerView.frame.size.height;
+        bannerFrame.origin.y = contentFrame.size.height - bannerFrame.size.height;
+    } else {
+        NSLog(@"ads NOT loaded !");
+        bannerFrame.origin.y = contentFrame.size.height;
+    }
+    
+    //    if (_bannerView.bannerLoaded){
+    [UIView animateWithDuration:animated ? 0 : 0.0 animations:^{
+        self.view.frame = contentFrame;
+        [self.view layoutIfNeeded];
+        bannerView.frame = bannerFrame;
+    }];
+    //    }else{
+    //        NSLog(@"Banner not loaded");
+    //    }
+}
+
+
+#pragma mark Bannerview delegate
+
+- (void)viewDidLayoutSubviews
+{
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"noads"])
+    {
+        [self layoutAnimated:[UIView areAnimationsEnabled]];
+    }
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    
+    [self layoutAnimated:YES];
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    NSLog(@"error log : %@",error);
+    [self layoutAnimated:YES];
+}
+
+- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
+{
+    
+    return YES;
+}
+
+- (void)bannerViewActionDidFinish:(ADBannerView *)banner
+{
+    
+}
+
+#pragma mark Earth Quacke
+
+- (void)earthquake:(UIView*)viewToShake
+{
+    CGFloat t = 2.0;
+    CGAffineTransform translateRight  = CGAffineTransformTranslate(CGAffineTransformIdentity, t, 0.0);
+    CGAffineTransform translateLeft = CGAffineTransformTranslate(CGAffineTransformIdentity, -t, 0.0);
+    
+    viewToShake.transform = translateLeft;
+    
+    [UIView animateWithDuration:0.07 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+        [UIView setAnimationRepeatCount:2.0];
+        viewToShake.transform = translateRight;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [UIView animateWithDuration:0.05 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                viewToShake.transform = CGAffineTransformIdentity;
+            } completion:^(BOOL finished) {
+                
+                [self gameOver];
+            }];
+        }
+    }];
+}
+
+
 
 
 - (void)didReceiveMemoryWarning
