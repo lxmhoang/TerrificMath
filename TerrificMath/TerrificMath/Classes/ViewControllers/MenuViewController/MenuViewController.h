@@ -13,6 +13,7 @@
 {
     ADBannerView *bannerView;
 }
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *playBtn;
 @property (weak, nonatomic) IBOutlet UIButton *rateBtn;

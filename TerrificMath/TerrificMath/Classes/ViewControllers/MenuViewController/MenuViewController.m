@@ -39,8 +39,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view addSubview:bannerView];
+//    [self.view addSubview:bannerView];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.titleLabel.text = @"1\"";
 }
 
 - (void)didReceiveMemoryWarning
@@ -81,6 +86,7 @@
 
 - (void)layoutAnimated:(BOOL)animated
 {
+    return;
     // As of iOS 6.0, the banner will automatically resize itself based on its width.
     // To support iOS 5.0 however, we continue to set the currentContentSizeIdentifier appropriately.
     CGRect contentFrame = self.view.bounds;

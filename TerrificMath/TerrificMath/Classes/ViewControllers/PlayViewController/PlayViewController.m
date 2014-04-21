@@ -57,26 +57,32 @@ bool stop = NO;
 
 - (void)viewDidLoad
 {
+
+    
     [gameOverView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"gameoverview.png"]]];
     
     [super viewDidLoad];
     
-    [self.view addSubview:bannerView];
+//    [self.view addSubview:bannerView];
     bannerView.alpha = 0;
     
     point = 0;
     pointLabel.text =@"0";
+    
+    [self newGame];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self newGame];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-
+    if ([ [ UIScreen mainScreen ] bounds ].size.height < 568)
+    {
+        [correctBtn setFrame:CGRectMake(correctBtn.frame.origin.x, 300, correctBtn.frame.size.width, correctBtn.frame.size.height)];
+        [wrongBtn setFrame:CGRectMake(wrongBtn.frame.origin.x, 300, wrongBtn.frame.size.width, correctBtn.frame.size.height)];
+    }
 }
 
 - (void)newGame
@@ -244,12 +250,30 @@ bool stop = NO;
     
 }
 
+- (void)dismissTmpView:(MenuViewController *)menuVC
+{
+    [menuVC dismissViewControllerAnimated:YES completion:^{
+    }];
+}
+
 - (IBAction)playBtnAction:(id)sender {
     gameOverView.frame = CGRectMake(30, -gameOverView.frame.size.height, gameOverView.frame.size.width, gameOverView.frame.size.height);
     gameOverView.alpha = 0;
     point = 0;
     pointLabel.text = @"0";
-    [self newGame];
+    
+    
+    
+    MenuViewController *menuVC = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
+    
+    menuVC.titleLabel.text = @"";
+    
+    [self presentViewController:menuVC animated:YES completion:^{
+        
+        [self newGame];
+        
+        [self performSelector:@selector(dismissTmpView:) withObject:menuVC afterDelay:0.2];
+    }];
 }
 
 - (IBAction)shareBtnAction:(id)sender {
@@ -293,6 +317,7 @@ bool stop = NO;
 
 - (void)layoutAnimated:(BOOL)animated
 {
+    
     // As of iOS 6.0, the banner will automatically resize itself based on its width.
     // To support iOS 5.0 however, we continue to set the currentContentSizeIdentifier appropriately.
     CGRect contentFrame = self.view.bounds;
@@ -363,25 +388,25 @@ bool stop = NO;
 
 - (void)earthquake:(UIView*)viewToShake
 {
-    CGFloat t = 2.0;
-    CGAffineTransform translateRight  = CGAffineTransformTranslate(CGAffineTransformIdentity, t, 0.0);
-    CGAffineTransform translateLeft = CGAffineTransformTranslate(CGAffineTransformIdentity, -t, 0.0);
-    
-    viewToShake.transform = translateLeft;
-    
-    [UIView animateWithDuration:0.07 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
-        [UIView setAnimationRepeatCount:2.0];
-        viewToShake.transform = translateRight;
-    } completion:^(BOOL finished) {
-        if (finished) {
-            [UIView animateWithDuration:0.05 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-                viewToShake.transform = CGAffineTransformIdentity;
-            } completion:^(BOOL finished) {
-                
+//    CGFloat t = 2.0;
+//    CGAffineTransform translateRight  = CGAffineTransformTranslate(CGAffineTransformIdentity, t, 0.0);
+//    CGAffineTransform translateLeft = CGAffineTransformTranslate(CGAffineTransformIdentity, -t, 0.0);
+//    
+//    viewToShake.transform = translateLeft;
+//    
+//    [UIView animateWithDuration:0.07 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+//        [UIView setAnimationRepeatCount:2.0];
+//        viewToShake.transform = translateRight;
+//    } completion:^(BOOL finished) {
+//        if (finished) {
+//            [UIView animateWithDuration:0.05 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+//                viewToShake.transform = CGAffineTransformIdentity;
+//            } completion:^(BOOL finished) {
+//                
                 [self gameOver];
-            }];
-        }
-    }];
+//            }];
+//        }
+//    }];
 }
 
 
