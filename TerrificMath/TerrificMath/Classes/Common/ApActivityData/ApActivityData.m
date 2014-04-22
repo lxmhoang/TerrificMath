@@ -13,7 +13,7 @@
           itemForActivityType:(NSString *)activityType
 {
     
-    NSString *message = [NSString stringWithFormat:@"Just scored %d points at One Second, a game which you have only 1 second to solve a math in each round %@  ", [[NSUserDefaults standardUserDefaults] integerForKey:kLatestPoint], appURL];
+    NSString *message = [NSString stringWithFormat:@"Just scored %d points at One Second, a game which you have only 1 second to give an answer in each round %@  ", (int)[[NSUserDefaults standardUserDefaults] integerForKey:kLatestPoint], appURL];
     
     if ( [activityType isEqualToString:UIActivityTypePostToTwitter] )
         return message;

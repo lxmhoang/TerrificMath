@@ -9,39 +9,9 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIcons</key>
-	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>2newlogo80</string>
-				<string>2newlogo58</string>
-				<string>2newlogo120</string>
-				<string>2newlogo29</string>
-				<string>2newlogo114</string>
-				<string>2newlogo57</string>
-				<string>newlogo80</string>
-				<string>newlogo58</string>
-				<string>newlogo29</string>
-				<string>newlogo120</string>
-				<string>newlogo114</string>
-				<string>newlogo57</string>
-				<string>testlogo80</string>
-				<string>testlogo58</string>
-				<string>testlogo114</string>
-				<string>testlogo57</string>
-				<string>testlogo29</string>
-				<string>testlogo120</string>
-				<string>logo27</string>
-				<string>logo80</string>
-				<string>logo58</string>
-				<string>logo29</string>
-				<string>logo120</string>
-				<string>logo114</string>
-				<string>logo57</string>
-			</array>
-		</dict>
-	</dict>
+	<dict/>
+	<key>CFBundleIcons~ipad</key>
+	<dict/>
 	<key>CFBundleIdentifier</key>
 	<string>com.lxmhoang.onesecond</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -51,11 +21,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.00</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.00</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
