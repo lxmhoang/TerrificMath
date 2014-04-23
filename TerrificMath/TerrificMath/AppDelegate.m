@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MenuViewController.h"
+#import "Appirater.h"
 
 @implementation AppDelegate
 
@@ -35,7 +36,11 @@
     MenuViewController *nextVC = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
     self.window.rootViewController = nextVC;
     [self.window makeKeyAndVisible];
-    
+    [Appirater appLaunched:YES];
+    [Appirater setAppId:@"862863452"];
+    [Appirater setDaysUntilPrompt:-1];
+    [Appirater setUsesUntilPrompt:2];
+    [Appirater setDebug:NO];
     return YES;
 }
 
@@ -53,6 +58,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    [Appirater appEnteredForeground:YES];
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 

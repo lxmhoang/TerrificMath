@@ -10,6 +10,7 @@
 #import "PlayViewController.h"
 
 #import "NiceButton.h"
+#import "Appirater.h"
 
 @interface MenuViewController ()
 
@@ -60,6 +61,7 @@
 }
 
 - (IBAction)rateBtnAction:(id)sender {
+    [Appirater rateApp];
 }
 - (IBAction)rankBtnAction:(id)sender {
     GKGameCenterViewController *gcViewController = [[GKGameCenterViewController alloc] init];
