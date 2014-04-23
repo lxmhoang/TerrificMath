@@ -40,7 +40,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [self.view addSubview:bannerView];
+    [self.view addSubview:bannerView];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -88,19 +88,7 @@
 
 - (void)layoutAnimated:(BOOL)animated
 {
-    return;
-    // As of iOS 6.0, the banner will automatically resize itself based on its width.
-    // To support iOS 5.0 however, we continue to set the currentContentSizeIdentifier appropriately.
-    CGRect contentFrame = self.view.bounds;
-//    if (contentFrame.size.width < contentFrame.size.height) {
-//        bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
-//    } else {
-//        bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;
-//    }
-    
-    
-    
-    CGRect bannerFrame = bannerView.frame;
+    CGRect contentFrame = self.view.bounds;    CGRect bannerFrame = bannerView.frame;
     if (bannerView.bannerLoaded) {
         NSLog(@"ads loaded !");
 //        contentFrame.size.height -= bannerView.frame.size.height;

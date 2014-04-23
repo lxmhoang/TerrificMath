@@ -14,6 +14,7 @@
 {
     
     NSString *message = [NSString stringWithFormat:@"Just scored %ld points at One Second, a game which you have only 1 second to solve a math in each round %@  ", (long)[[NSUserDefaults standardUserDefaults] integerForKey:kLatestPoint], appURL];
+
     
     if ( [activityType isEqualToString:UIActivityTypePostToTwitter] )
         return message;

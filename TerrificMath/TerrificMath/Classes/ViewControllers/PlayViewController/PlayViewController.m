@@ -63,7 +63,7 @@ bool stop = NO;
     
     [super viewDidLoad];
     
-//    [self.view addSubview:bannerView];
+    [self.view addSubview:bannerView];
     bannerView.alpha = 0;
     
     point = 0;
@@ -98,7 +98,6 @@ bool stop = NO;
     }
     
     
-    NSLog(@"color index : %d",[listColor indexOfObject:color]);
     
     [self.view setBackgroundColor:color];
     
@@ -317,7 +316,6 @@ bool stop = NO;
 
 - (void)layoutAnimated:(BOOL)animated
 {
-    
     // As of iOS 6.0, the banner will automatically resize itself based on its width.
     // To support iOS 5.0 however, we continue to set the currentContentSizeIdentifier appropriately.
     CGRect contentFrame = self.view.bounds;
